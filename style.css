@@ -13,77 +13,86 @@
 /* Imports the font that is used on this page. */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
 
-
-/* This section sets the defaults for the page, but you may never see changes here if they are overwritten by the div elements below.  */
+/* Remove the browser's default spacing around the page */
 html, body {
-	margin: 0;  /* Margin is the amount of space between the border of an element, and the elements outside it. */
-	padding: 0; /* Padding is the amount of space between the border of an element, and the elements inside it. */
+margin: 0;
+padding: 0;
 }
 
-body{
-	font: 130%/1.3 TrebuchetMS,Arial,sans-serif;  /* Default fonts */
-	text-align: left; /* Alignment of the text */
-	color: black; /* Main text color */
-	background: white; /* Main text background color */
-	padding-bottom: 20px; /* You can set padding or margin for one side of an element at a time */
+/* Set the default appearance of the webpage */
+body {
+font: 130%/1.4 TrebuchetMS, Arial, sans-serif; /* Default font and line spacing */
+text-align: left; /* Align text to the left */
+color: #102a43; /* Dark blue text for readability */
+background: #f6f2e8; /* Light tan background inspired by Santa Cruz beaches */
+padding-bottom: 20px; /* Add space at the bottom of the page */
 }
 
-a {                  /* A stands for link, so this section is setting the default characteristics of links. */
-	color: #0000cc;
-	text-decoration: none;
+/* Style all hyperlinks */
+a {
+color: #0055a4; /* UC Santa Cruz style blue */
+text-decoration: none; /* Remove the underline */
+font-weight: bold; /* Make links easier to see */
 }
 
-h1 {		     /* This styles the header at the top of the page */
-	font: bold 2.1em 'Source Sans Pro',Arial, Sans-Serif;
-	text-align: left;
-	color: white;
+/* Main page title */
+h1 {
+font: bold 2.1em 'Source Sans Pro', Arial, Sans-Serif;
+text-align: left;
+color: #ffcc33; /* Golden yellow title color */
 }
 
-h2 {		     /* This styles the headers within the page */
-	font: bold 1.1em 'Source Sans Pro',Arial, Sans-Serif;
-	padding: 0;
-	margin: 0;
+/* Section headings */
+h2 {
+font: bold 1.1em 'Source Sans Pro', Arial, Sans-Serif;
+padding: 0;
+margin: 0 0 12px 0; /* Add spacing below headings */
 }
 
-
-/* This section alters the appearance of all divs with the class "section", which is all of the divs in our html file.  We can use it to specify style elements that we want to be the same accross divs. */
+/* Style shared by every content section */
 div.section {
-	padding: 1em;
-	margin-bottom: 0;
-	text-align: justify;
-
+padding: 1.4em; /* Increase spacing inside sections */
+margin: 0 auto 18px auto; /* Center sections with space between them */
+max-width: 1000px; /* Prevent content from stretching too wide */
+text-align: justify; /* Keep paragraph edges aligned */
+border-radius: 12px; /* Rounded corners */
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18); /* Light shadow for depth */
 }
 
-/* If we want the divs with ids plan and more to look the same, we can put them together */
-#plan, #more {
-	background: #FF9900;
-	color: black;
-	font: 'Source Sans Pro',Arial, Sans-Serif;
-	background-image: none;  /* replace none with url('image-url') to set a background image  */
+/* Apply the same style to the "plan" and "more" sections */
+#plan,
+#more {
+background: #0055a4; /* Blue background */
+color: #ffffff; /* White text for contrast */
+font: 'Source Sans Pro', Arial, Sans-Serif;
+background-image: none; /* No background image */
 }
 
-/* You can alter the links within a div with the following syntax */
-#plan a {
-	color: #0000cc;
+/* Style links inside the blue sections */
+#plan a,
+#more a {
+color: #ffcc33; /* Gold links stand out on blue */
 }
 
-/* This alters the appearance of the div with id="signup". */
+/* Style the interactive poem section */
 #poem {
-	height: 110px;
-	background: white;
-	text-align: center;
+height: 110px;
+background: #ffcc33; /* Gold background */
+color: #102a43; /* Dark blue text */
+text-align: center; /* Center the poem text */
 }
 
-/* This alters the appearance of the div with id="whoweare" */
+/* Style the "Who We Are" section */
 #whoweare {
-	background: white;
-	color: black; 
+background: #ffffff; /* White background */
+color: #102a43; /* Dark blue text */
 }
 
-/* This alters the appearance of the div with id="minileft", the div containing the images */
+/* Style the image on the left side of the page */
 .minileft {
-	float: left;
-	height: 100%;
-	margin-bottom:1.5em;
-	margin-right: 1em;
+float: left; /* Float image beside the text */
+height: 100%;
+margin-bottom: 1.5em; /* Space below image */
+margin-right: 1em; /* Space between image and text */
+border-radius: 10px; /* Rounded image corners */
 }
